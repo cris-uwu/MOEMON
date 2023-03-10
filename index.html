@@ -9,10 +9,12 @@
 
     <title>POKEDEX</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css" integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootlint@1.1.0/dist/browser/bootlint.min.js" integrity="sha384-D0zT3yu3RBG+Jc54wtMtxDEyZGWfa30nEkS/o2AyBZUOmIpezYYjBLZjUetRV3iG" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css" 
+    integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous">
+    
 
 
     <link rel="shortcut icon" href="imagenes/pokeball.webp" type="image/x-icon">
@@ -21,7 +23,18 @@
 
 </head>
 
-<body background="imagenes/Gengar.jpg" >
+<body onclick="playaudio()" background="imagenes/dito.gif" >
+
+  <audio id="conga">
+    <source src="audio/conga.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function playaudio(){
+      document.getElementById("conga").play();
+    }
+  </script>
+
 
 
   <center>
@@ -29,15 +42,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-red bg-primary">
         <div class="container-fluid">
-
           <a class="navbar-brand" href="#">POKEDEX</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav me-auto">
-            </ul>
-
           </div>
         </div>
       </nav>
@@ -50,10 +55,12 @@
       <form id="registro">
 
         <label for="Nombre">Nombre:</label>
-        <input type="text" id="Nombre" name="Nombre" required>
+        <br/>
+        <input placeholder="Nombre de entrenador" type="text" id="Nombre" name="Nombre" required>
         <br>
 
         <label for="Genero">Cual es el Genero:</label>
+        <br/>
         <select id="Genero" name="Genero" required>
           <option value="">Genero</option>
 
@@ -62,8 +69,9 @@
         </select>
         <br>
 
-        <label for="Rival">Rival:</label>
-        <input type="text" id="Rival" name="Rival" required>
+        <label for="Rival"><b>Rival:</b></label>
+        <br/>
+        <input placeholder="Quien es tu Rival"type="text" id="Rival" name="Rival" required>
         <br>
         
        
@@ -72,6 +80,7 @@
       <h5>Registro de pokeball</h5>
 
        <label for="Tipo">Cual es la pokeball:</label>
+       <br/>
         <select id="Tipo" name="Tipo" required>
           <option value="">Tipo</option>
 
@@ -89,11 +98,13 @@
 <h5>Registro Pokemonstruos</h5>
 
         <label for="compañero">Cual es tu Pokemon_? :</label>
-        <input type="text" id="compañero" name="compañero" required>
+        <br/>
+        <input placeholder="Cual es tu Pokemon?"type="text" id="compañero" name="compañero" required>
         <br>
 
 
 <label for="Elemento">de que tipo es tu Pokemon_?:</label>
+<br/>
         <select id="Elemento" name="Elemento" required>
           <option value="">Elemento</option>
 
@@ -115,13 +126,13 @@
           <option value="Dragon">Dragon</option>
           <option value="SINIENTRO">SINIENTRO</option>
           <option value="Hada">Hada</option>
-
         </select>
         <br>
 
 
         <label for="Nivel">Cual es el nivel de tu pokemon_? :</label>
-        <input type="text" id="Nivel" name="Nivel" required>
+        <br/>
+        <input placeholder="Nivel"type="text" id="Nivel" name="Nivel" required>
         <br>
 
 
